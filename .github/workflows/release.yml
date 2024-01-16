@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "echo version"
-      - run: echo "version ${{github.event.inputs.releaseversion}}"
+        run: echo "version ${{github.event.inputs.releaseversion}}"
       - name: Checkout code
         uses: actions/checkout@v2
