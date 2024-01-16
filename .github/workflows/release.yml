@@ -15,5 +15,7 @@ jobs:
         run: echo "version ${{github.event.inputs.releaseversion}}"
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: release
       - name: run status
         run: git branch --show-current
