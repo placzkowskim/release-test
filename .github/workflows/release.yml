@@ -11,4 +11,4 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "version"
+      - run: echo "version ${{github.event.inputs.releaseversion}}"
