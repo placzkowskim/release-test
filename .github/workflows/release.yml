@@ -8,7 +8,15 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Istall dependencies
+      - name: Install dependencies
         run: npm ci
       - name: End message
         run: echo 'Dependencies installed'
+      - name: Initialize Git User
+        run: |
+          git config --global user.email "placzkowskim@hotmail.com"
+          git config --global user.name "Release Workflow"
+      - name: Run release
+        run: npm run release --ci
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
