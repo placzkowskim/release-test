@@ -1,13 +1,14 @@
 name: Releas, tag and bump version in package JSON
 on:
   workflow_dispatch:
-    jobs:
-      release:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v2
-          - name: Istall dependencies
-            run: npm ci
-          - name: End message
-            run: echo 'Dependencies installed'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Istall dependencies
+        run: npm ci
+      - name: End message
+        run: echo 'Dependencies installed'
