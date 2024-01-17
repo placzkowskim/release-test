@@ -1,4 +1,4 @@
-name: Relase-it
+name: Semantic release
 on:
   workflow_dispatch:
 
@@ -8,6 +8,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20.8.1
       - name: Install dependencies
         run: npm ci
       - name: End message
@@ -16,7 +20,7 @@ jobs:
         run: |
           git config --global user.email "placzkowskim@hotmail.com"
           git config --global user.name "Release Workflow"
-      - name: Run release
-        run: npx release-it --only-version
+      - name: Run release with semantic-release
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
