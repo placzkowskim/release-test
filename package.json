@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/placzkowskim/release-test#readme",
   "devDependencies": {
+    "release-it": "^17.0.1",
     "replace-in-file": "^7.1.0"
   }
 }
