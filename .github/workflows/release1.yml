@@ -1,0 +1,35 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      releaseversion:
+        description: "pass release version in v*.*.* format"
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo version
+        run: echo "version ${{github.event.inputs.releaseversion}}"
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: release
+      - name: run status
+        run: git branch --show-current
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ github.event.inputs.releaseversion }}
+          release_name: Release ${{ github.event.inputs.releaseversion }}
+          body: |
+            Changes in this Release
+            - First Change
+            - Second Change
+          draft: false
+          prerelease: false

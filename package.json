@@ -1,0 +1,34 @@
+{
+  "name": "realase-test",
+  "version": "0.0.6",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "release": "release-it",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bump-version": "npm version patch && node ./bump-version.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/placzkowskim/release-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/placzkowskim/release-test/issues"
+  },
+  "homepage": "https://github.com/placzkowskim/release-test#readme",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^11.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
+    "@semantic-release/release-notes-generator": "^12.1.0",
+    "release-it": "^17.0.1",
+    "replace-in-file": "^7.1.0",
+    "semantic-release": "^23.0.0"
+  }
+}
