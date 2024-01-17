@@ -7,6 +7,7 @@
     "test": "test"
   },
   "scripts": {
+    "release": "release-it",
     "test": "echo \"Error: no test specified\" && exit 1",
     "bump-version": "npm version patch && node ./bump-version.js"
   },
