@@ -1,7 +1,7 @@
 {
   "git": {
-    "requireBranch": "main",
-    "commitMessage": "release v${version}"
+    "requireBranch": "main, release",
+    "commitMessage": "release ${version}"
   },
   "github": {
     "release": true
