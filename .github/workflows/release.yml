@@ -5,6 +5,7 @@ on:
       releaseversion:
         description: "pass release version in *.*.* format"
         required: true
+        type: string
 
 jobs:
   release:
