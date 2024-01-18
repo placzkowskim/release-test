@@ -1,13 +1,17 @@
 {
   "git": {
     "requireBranch": "main",
-    "commitMessage": "release v${version}"
+    "commitMessage": "release ${version}",
+    "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
   },
   "github": {
     "release": true
   },
   "npm": {
     "publish": false
+  },
+  "hooks": {
+    "after:bump": "npx auto-changelog -p"
   }
 
 }
