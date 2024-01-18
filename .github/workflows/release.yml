@@ -1,6 +1,10 @@
 name: Relase-it
 on:
   workflow_dispatch:
+    inputs:
+      releaseversion:
+        description: "pass release version in *.*.* format"
+        required: true
 
 jobs:
   release:
