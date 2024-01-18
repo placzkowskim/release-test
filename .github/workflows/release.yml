@@ -28,6 +28,6 @@ jobs:
           git config --global user.email "xx@hotmail.com"
           git config --global user.name "Release Workflow"
       - name: Run release
-        run: npx release-it --ci  -VV
+        run: npx release-it ${{github.event.inputs.releaseversion}} --ci  -VV
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
