@@ -1,6 +1,5 @@
 {
   "git": {
-    "requireBranch": "main, release",
     "commitMessage": "release ${version}"
   },
   "github": {
