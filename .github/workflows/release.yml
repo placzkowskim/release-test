@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       releaseversion:
-        description: "pass release version in *.*.* format"
+        description: "pass release version in v*.*.* format"
         required: true
         type: string
 
@@ -19,9 +19,9 @@ jobs:
         run: echo 'Dependencies installed'
       - name: Initialize Git User
         run: |
-          git config --global user.email "placzkowskim@hotmail.com"
+          git config --global user.email "xx@hotmail.com"
           git config --global user.name "Release Workflow"
       - name: Run release
-        run: npx release-it ${{github.event.inputs.releaseversion}} --ci
+        run: npx release-it ${{github.event.inputs.releaseversion}} --ci  -VV
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
