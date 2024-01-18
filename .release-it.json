@@ -8,12 +8,6 @@
   },
   "npm": {
     "publish": false
-  },
-  "plugins": {
-    "@release-it/bumper": {
-      "in": "composer.json",
-      "out": "composer.json"
-    }
   }
 
 }
