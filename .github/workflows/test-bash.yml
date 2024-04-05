@@ -12,7 +12,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: drop
-          path: /
+          path: ./release-test
       - name: Run composite
         uses: ./.github/actions/composite-action 
 
