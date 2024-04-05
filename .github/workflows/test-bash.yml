@@ -8,6 +8,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+      - name: "check dir"
+        shell: bash
+        run: |
+          ls
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
