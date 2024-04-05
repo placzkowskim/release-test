@@ -4,6 +4,9 @@ runs:
   steps:
     - name: "download artifact"
       uses: actions/download-artifact@v4
+      with: 
+        name: drop
+        path: drop
     - name: "check dir"
       shell: bash
       run: |
