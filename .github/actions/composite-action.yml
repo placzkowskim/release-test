@@ -2,6 +2,8 @@ name: 'composite action'
 runs:
   using: 'composite'
   steps:
+    - name: "download artifact"
+      uses: actions/download-artifact@v4
     - name: "check dir"
       shell: bash
       run: |
