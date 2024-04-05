@@ -1,0 +1,8 @@
+name: 'composite action'
+runs:
+  using: 'composite'
+  steps:
+    - name: "check dir"
+      shell: bash
+      run: |
+        ls

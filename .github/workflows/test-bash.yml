@@ -8,7 +8,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: abc
-        shell: bash
-        run: | 
-          ls
+
+      - name: Run composite
+        uses: ./.github/actions/composite-action 
+
+
+
